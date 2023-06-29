@@ -1,6 +1,6 @@
 <section>
-  <form>
-    <input type="text" placeholder="Filter by city" #filter>
+  <form (submit)="$event.preventDefault()">
+    <input (change)="filterResults(filter.value)" type="text" placeholder="Filter by city" #filter>
     <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
   </form>
   <section class="results">
