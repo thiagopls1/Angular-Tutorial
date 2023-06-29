@@ -3,4 +3,8 @@
     <input type="text" placeholder="Filter by city">
     <button class="primary" type="button">Search</button>
   </form>
+  <section class="results">
+    <!-- [atributo]="valor" -->
+    <app-housing-location *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation"></app-housing-location> 
+  </section>
 </section>
