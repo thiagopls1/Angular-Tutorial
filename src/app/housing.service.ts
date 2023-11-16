@@ -10,7 +10,6 @@ export class HousingService {
     url: string = `${environment.apiUrl}/locations`;
 
   async getAllHousingLocations(): Promise<HousingLocation[]>{
-    // console.log(process.env)
     const data = await fetch(this.url);
     return await data.json() ?? [];
   }
