@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HousingLocation } from './housinglocation';
-
+import { environment } from '../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class HousingService {
 
-    url: string = "http://localhost:3000/locations";
+
+    url: string = `${environment.apiUrl}/locations`;
 
   async getAllHousingLocations(): Promise<HousingLocation[]>{
+    // console.log(process.env)
     const data = await fetch(this.url);
     return await data.json() ?? [];
   }
