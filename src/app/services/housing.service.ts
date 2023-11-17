@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
 export class HousingService {
 
 
-    url: string = `${environment.apiUrl}/locations`;
+  url: string = `${environment.apiUrl}/locations`;
 
   async getAllHousingLocations(): Promise<HousingLocation[]>{
     const data = await fetch(this.url);
